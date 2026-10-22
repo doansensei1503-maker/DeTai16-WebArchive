@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Lập trình PHP hướng đối tượng: Những điều cần biết">
+<meta property="og:description" content="Bài viết giới thiệu về lập trình hướng đối tượng trong PHP, bao gồm class, kế thừa, interface và tính đa hình.">
+<meta name="author" content="Nguyễn Văn An">
+<meta property="article:published_time" content="2024-01-15T08:30:00+07:00">
+<title>Lập trình PHP hướng đối tượng: Những điều cần biết</title>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="/">Trang chủ</a></li>
+      <li><a href="/tin-tuc">Tin tức</a></li>
+      <li><a href="/lien-he">Liên hệ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <h1>Lập trình PHP hướng đối tượng: Những điều cần biết</h1>
+    <p class="byline">Tác giả: <span itemprop="author">Nguyễn Văn An</span> · Ngày đăng: 15/01/2024</p>
+
+    <p>Lập trình hướng đối tượng (Object Oriented Programming - OOP) là một mô hình lập trình
+    tổ chức chương trình theo các đối tượng, mỗi đối tượng có thuộc tính và hành vi riêng.
+    Trong PHP, OOP là nền tảng quan trọng để xây dựng các ứng dụng lớn, có thể mở rộng và dễ bảo trì.</p>
+
+    <h2>Khái niệm cơ bản</h2>
+    <p>Trong PHP, một đối tượng được định nghĩa thông qua class. Class là một khuôn mẫu mô tả
+    thuộc tính và phương thức mà các đối tượng sẽ có. Khi khởi tạo một đối tượng từ class,
+    các thuộc tính được gán giá trị mặc định hoặc giá trị truyền vào từ constructor.</p>
+
+    <p>Ví dụ, ta định nghĩa một class <code>SinhVien</code> với các thuộc tính họ tên, mã số
+    và điểm trung bình. Mỗi sinh viên sẽ có những thông tin riêng nhưng cùng chia sẻ một khuôn
+    mẫu chung, giúp giảm thiểu sự trùng lặp trong mã nguồn.</p>
+
+    <h2>Tính kế thừa</h2>
+    <p>Kế thừa cho phép một lớp con thừa kế thuộc tính và phương thức từ lớp cha. Nhờ đó,
+    chúng ta có thể xây dựng một cấu trúc phân cấp rõ ràng, tránh lặp lại mã nguồn ở mức cao
+    nhất có thể. Trong PHP, từ khóa <code>extends</code> được sử dụng để khai báo kế thừa.</p>
+
+    <p>Chẳng hạn, nếu chúng ta có lớp <code>Nguoi</code> với thuộc tính <code>hoTen</code>,
+    thì lớp <code>NhanVien</code> có thể kế thừa từ <code>Nguoi</code> và bổ sung thêm các
+    thuộc tính riêng như <code>luong</code> và <code>phongBan</code>.</p>
+
+    <h2>Interface và tính đa hình</h2>
+    <p>Interface định nghĩa một tập hợp các phương thức mà lớp phải thực hiện, nhưng không
+    cung cấp phần cài đặt. Nhờ interface, các lớp khác nhau vẫn có thể hoán đổi vị trí với nhau
+    trong cùng một ngữ cảnh, đó là tính đa hình. Đây là nguyên tắc quan trọng trong thiết kế
+    phần mềm, được khuyến nghị trong các nguyên tắc SOLID.</p>
+
+    <p>PHP hỗ trợ đầy đủ các khái niệm của OOP như abstract class, trait, magic method,
+    late static binding và type hint. Những tính năng này giúp lập trình viên xây dựng các
+    ứng dụng có kiến trúc rõ ràng, dễ kiểm thử và bảo trì trong thời gian dài.</p>
+
+    <blockquote>
+      <p>"Lập trình tốt không phải là viết nhiều mã lệnh, mà là thiết kế một kiến trúc
+      mà người khác có thể hiểu và tiếp tục phát triển."</p>
+    </blockquote>
+
+    <h2>Kết luận</h2>
+    <p>PHP hướng đối tượng là một công cụ mạnh mẽ giúp xây dựng những ứng dụng có quy mô lớn.
+    Khi nắm vững các khái niệm cơ bản như class, kế thừa, interface và tính đa hình, bạn sẽ
+    có nền tảng vững chắc để phát triển các dự án phần mềm chuyên nghiệp và bền vững.</p>
+  </article>
+
+  <aside class="sidebar">
+    <h3>Bài viết liên quan</h3>
+    <ul>
+      <li><a href="/php-mvc">Xây dựng ứng dụng PHP MVC</a></li>
+      <li><a href="/php-8-tinh-nang">Tính năng mới trong PHP 8</a></li>
+    </ul>
+  </aside>
+</main>
+
+<footer>
+  <p>&copy; 2024 Website thử nghiệm DeTai16. Đây là nội dung giả lập phục vụ kiểm thử.</p>
+</footer>
+</body>
+</html>

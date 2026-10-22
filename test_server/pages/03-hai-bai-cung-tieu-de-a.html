@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Bài viết A: Hướng dẫn cài đặt Ubuntu Server">
+<meta property="og:description" content="Hướng dẫn chi tiết các bước cài đặt Ubuntu Server 22.04 LTS từ chuẩn bị đĩa cài đặt đến cấu hình hệ thống sau khi cài.">
+<meta name="author" content="Lê Văn B">
+<meta property="article:published_time" content="2024-03-05T09:00:00+07:00">
+<title>Bài viết A: Hướng dẫn cài đặt Ubuntu Server</title>
+</head>
+<body>
+<main>
+<article>
+  <h1>Bài viết A: Hướng dẫn cài đặt Ubuntu Server</h1>
+  <p class="byline">Tác giả: <span itemprop="author">Lê Văn B</span> · Ngày đăng: 05/03/2024</p>
+
+  <p>Trong bài viết này chúng ta sẽ tìm hiểu cách cài đặt Ubuntu Server 22.04 từ đầu đến
+  cuối một cách chi tiết. Việc cài đặt hệ điều hành server là bước đầu tiên quan trọng
+  nhất khi bạn muốn triển khai một hệ thống web hoặc ứng dụng trên môi trường thực tế.</p>
+
+  <p>Trước khi bắt đầu, bạn cần chuẩn bị một máy tính hoặc máy ảo có ít nhất 2GB RAM,
+  20GB đĩa cứng trở lên và một đĩa USB khởi tạo. Bạn cũng cần có kết nối Internet ổn định
+  để tải về các gói cài đặt trong quá trình thực hiện các bước sau đây.</p>
+
+  <h2>Chuẩn bị đĩa cài đặt</h2>
+  <p>Trước hết, ta tải file ISO của Ubuntu Server 22.04 LTS từ trang chính thức của Canonical.
+  File ISO này có dung lượng khoảng 2GB, nên bạn cần lưu trong ổ đĩa USB. Sau đó sử dụng
+  công cụ Rufus để ghi file ISO này lên USB.</p>
+
+  <p>Trước khi ghi, hãy chọn chế độ UEFI trong Rufus nếu máy chủ của bạn hỗ trợ UEFI.
+  Chế độ Legacy sẽ được sử dụng cho máy chủ cũ hơn và không hỗ trợ UEFI.</p>
+
+  <h2>Quy trình cài đặt</h2>
+  <p>Khi đã ghi xong file ISO lên đĩa USB, ta khởi động lại máy tính và chọn boot từ đĩa USB.
+  Màn hình cài đặt sẽ hiện lên, tại đây ta chọn ngôn ngữ là Tiếng Việt và cấu hình máy chủ
+  theo hướng dẫn của trình cài đặt.</p>
+
+  <p>Bạn có thể chọn kiểu phân vùng thủ công để tùy biến phân vùng đĩa, hoặc chọn phân
+  vùng tự động để đơn giản nhất. Với người mới bắt đầu, phân vùng tự động là lựa chọn an toàn
+  và tiết kiệm thời gian nhất.</p>
+
+  <h2>Thiết lập cấu hình sau khi cài đặt</h2>
+  <p>Sau khi cài đặt xong và hệ thống đã khởi động lại, bạn cần cấu hình một số thông số cơ bản.
+  Trước hết là cập nhật hệ thống qua lệnh <code>apt update &amp;&amp; apt upgrade</code>. Tiếp theo
+  là tạo một tài khoản không phải root để sử dụng hằng ngày và thay đổi quyền root.</p>
+
+  <p>Bạn cũng nên cài đặt và cấu hình firewall bằng ufw để bảo vệ máy chủ khỏi các kết nối
+  không mong muốn từ bên ngoài. Cuối cùng, hãy thiết lập dịch vụ SSH để có thể quản lý máy chủ
+  từ xa một cách thuận tiện.</p>
+</article>
+</main>
+<footer>
+  <p>&copy; 2024 Website thu nghiem DeTai16 - noi dung gia lap phuc vu kiem thu.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài viết chứa script và thuộc tính sự kiện</title>
+
+</head>
+<body><script>
+  // Script duoc chay truc tiep - phai bi loai bo khi luu
+  document.write("<h1>NE DUOC CHEN VAO DOM</h1>");
+  alert("Ban da bi hack!");
+</script>
+<script src="https://evil.example.com/malware.js"></script>
+<body onload="alert('XSS onload')" onunload="alert('XSS onunload')">
+<main>
+<article>
+  <h1>Bài viết chứa script và thuộc tính sự kiện</h1>
+  <p>Trang nay co chu dich dua vao script va thuoc tinh su kien de kiem thung co an toan
+  cua che do lam sach HTML co hoat dong dung hay khong. Khi bai viet duoc luu va mo lai,
+  <strong>khong co script nao duoc chay</strong> va <strong>khong co thuoc tinh on* nao duoc giu lai</strong>.</p>
+  <p onclick="alert('XSS onclick')">Doan van ban nay co thuoc tinh onclick duoc gan truc tiep vao the p.</p>
+  <p>Doan van ban nay khong co thuoc tinh nguy hiem nao, nen no phai duoc giu nguyen.</p>
+  <p><a href="javascript:alert('XSS javascript URL')">Lien ket javascript khong duoc phep</a></p>
+  <p><a href="https://example.com/ok">Lien ket HTTP binh thuong duoc phep</a></p>
+  <img src="/images/safe.png" alt="Anh binh thuong" onerror="alert('XSS onerror')" width="200" height="100">
+  <p>Neu ban thay dong chu "NE DUOC CHEN VAO DOM" o tren trang doc lai, nghia la che do
+  lam sach HTML da that bai va co lo hong bao mat.</p>
+</article>
+</main>
+<footer>
+  <p>&copy; 2024 Website thu nghiem DeTai16 - noi dung gia lap phuc vu kiem thu.</p>
+</footer>
+</body>
+</html>

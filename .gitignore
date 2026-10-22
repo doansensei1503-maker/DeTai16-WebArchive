@@ -1,0 +1,51 @@
+# =====================================================================
+# DeTai16 - WebArchive — .gitignore
+# ---------------------------------------------------------------------
+# Muc dich: KHONG dua len GitHub thong tin bi mat (mat khau MySQL,
+# anh da luu, log chay may chu) va thu muc cai lai qua Composer.
+# Mot comment truoc moi nhom de sinh vien hieu vi sao file bi bo qua.
+# =====================================================================
+
+# --- 1. BI MAT: chua mat khau MySQL va cau hinh rieng cua may ---------
+# .env chua DB_PASS nen TUYET DOI khong commit.
+# Nguoi khac tao file rieng tu .env.example.
+/.env
+.env.local
+.env.*.local
+
+# --- 2. Dependency cai lai bang Composer ------------------------------
+# vendor/ khong commit; chay `composer install` de tai lai.
+/vendor/
+
+# --- 3. Du lieu runtime: anh da luu + log + cache ---------------------
+# storage/assets chua anh tai ve tu trang Web.
+# storage/logs chua log thu thap; storage/cache chua cache tam.
+/storage/assets/
+/storage/cache/
+/storage/logs/
+/storage/*.local
+
+# --- 4. Log cua PHP built-in server (start.ps1) -----------------------
+# .gitignore cu chi chan *.log nen file .txt cu the bi commit nham.
+/logs_server.txt
+/logs_server_err.txt
+*.log
+
+# --- 5. File tam cua lientinh / editor -------------------------------
+# File cookie do curl sinh ra khi chay kiem thu E2E — chua token phien
+# dang nhap THAT, KHONG BAO GIO commit.
+/tmp_*
+/bin/cook*.txt
+/bin/*cookie*.txt
+.phpunit.cache/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- GHI CHU cho nguoi doc file nay ----------------------------------
+# KHONG ignore: /composer.lock, /test_server/, /database/, /tests/
+#   - composer.lock : khoa version dependency de cai dat lai trung y
+#   - test_server/   : may chu HTML tinh dung de kiem thung thu thap
+#   - database/      : script schema + du lieu mau (khong chua mat khau)
