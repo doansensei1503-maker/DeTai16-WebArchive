@@ -192,7 +192,50 @@ lưu URL, chặn SSRF, phục vụ ảnh nội bộ, 404, đăng xuất.
 
 ---
 
-## 8. Cách cập nhật file này
+## 8. GitHub Issues và Milestones
+
+**Trạng thái:** Chưa tạo trên GitHub.
+**Nguyên nhân:** máy đang cấu hình chưa có GitHub CLI (`gh`) và chưa xác thực
+GitHub API bằng token có quyền quản lý issue.
+
+### Cách cấu quyền để tạo Issue và Milestone
+
+1. Cài GitHub CLI:
+   ```powershell
+   winget install --id GitHub.cli
+   ```
+2. Đăng nhập bằng trình duyệt (không dán token vào màn hình lệnh):
+   ```powershell
+   gh auth login
+   ```
+   Chọn: `GitHub.com` → `HTTPS` → `Login with a web browser`.
+3. Kiểm tra đã đăng nhập:
+   ```powershell
+   gh auth status
+   ```
+
+### Cấu trúc milestone dự kiến
+
+| Milestone | Nội dung | Trạng thái |
+|---|---|---|
+| **M1 — CN1 đến CN3** | Quản lý thư viện, thu thập nội dung, đọc offline | Đã hoàn thành |
+| **M2 — CN4** | Tìm kiếm và ghi chú | Chưa bắt đầu |
+| **M3 — CN5** | Phiên bản và xuất bài viết | Chưa bắt đầu |
+| **M4 — Bàn giao** | Kiểm thử tổng thể, đóng gói, báo cáo | Đang thực hiện |
+
+Sau khi có `gh`, tạo nhanh:
+
+```powershell
+gh milestone create "M1 — CN1-CN3" --description "..."
+gh issue create --title "..." --milestone "M1 — CN1-CN3" --label enhancement
+```
+
+Trong lúc chờ cấp quyền, các mục việc CN4 và CN5 đã được ghi đầy đủ trong
+mục 5 và mục 6 của file này.
+
+---
+
+## 9. Cách cập nhật file này
 
 Mỗi khi hoàn thành một chức năng hoặc một nhóm sửa lỗi:
 
